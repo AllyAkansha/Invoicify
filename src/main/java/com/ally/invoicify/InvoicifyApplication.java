@@ -1,4 +1,4 @@
-package com.el.onboarding.junit.invoicify;
+package com.ally.invoicify;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

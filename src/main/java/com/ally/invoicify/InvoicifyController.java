@@ -1,18 +1,18 @@
-package com.el.onboarding.junit.invoicify;
+package com.ally.invoicify;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.stereotype.Controller;
 
-import com.el.onboarding.junit.invoicifyModels.BillingRecord;
-import com.el.onboarding.junit.invoicifyModels.FlatFeeBillingRecord;
-import com.el.onboarding.junit.invoicifyModels.Invoice;
-import com.el.onboarding.junit.invoicifyModels.RateBasedBillingRecord;
-import com.el.onboarding.junit.invoicifyRepositories.BillingRecordRepository;
-import com.el.onboarding.junit.invoicifyRepositories.CompanyRepository;
-import com.el.onboarding.junit.invoicifyRepositories.InvoiceLineItemRepository;
-import com.el.onboarding.junit.invoicifyRepositories.InvoiceRepository;
+import com.ally.invoicify.models.BillingRecord;
+import com.ally.invoicify.models.FlatFeeBillingRecord;
+import com.ally.invoicify.models.Invoice;
+import com.ally.invoicify.models.RateBasedBillingRecord;
+import com.ally.invoicify.repositories.BillingRecordRepository;
+import com.ally.invoicify.repositories.CompanyRepository;
+import com.ally.invoicify.repositories.InvoiceLineItemRepository;
+import com.ally.invoicify.repositories.InvoiceRepository;
 
 @Controller
 //@RequestMapping("/")

@@ -1,8 +1,8 @@
-package com.el.onboarding.junit.invoicifyRepositories;
+package com.ally.invoicify.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.el.onboarding.junit.invoicifyModels.Invoice;
+import com.ally.invoicify.models.Invoice;
 
 public interface InvoiceRepository extends JpaRepository<Invoice, Integer> {
 

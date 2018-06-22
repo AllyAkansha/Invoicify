@@ -1,4 +1,4 @@
-package com.el.onboarding.junit.invoicifyModels;
+package com.ally.invoicify.models;
 
 public class RateBasedBillingRecord extends BillingRecord{
 	private double rate;

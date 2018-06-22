@@ -1,4 +1,4 @@
-package com.el.onboarding.junit.invoicifyModels;
+package com.ally.invoicify.models;
 
 import java.util.ArrayList;
 
