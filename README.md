@@ -14,41 +14,41 @@ Setup base spring app with dependencies needed
 Create repo for collaboration on GitHub and add team members as collaborators
 
 Create models (entities) and relationships
-..* Company
-    ..* id
-    ..* name
-    ..* Invoices (@OneToMany(mappedBy=“company")
-..* Invoice
-    ..* id
-    ..* company (@ManyToOne)
-    ..* createdOn
-    ..* invoiceDescription
-    ..* lineItems (@OneToMany(mappedBy="invoice", cascade=CascadeType.ALL)
-..* BillingRecord (abstract class)
-    ..* id
-    ..* createdOn
-    ..* description
-    ..* lineItem (@OneToOne(mappedBy=“billingRecord”)
-    ..* company (@ManyToOne)
-    ..* Create abstract method getTotal. Should return a double
-..* FlatFeeBillingRecord (extends BillingRecord)
-    ..* amount
-    ..* Implement abstract method from parent for getTotal that returns the amount property
-..* RateBasedBillingRecord (extends BillingRecord)
-    ..* rate
-    ..* quantity
-   ..* Implement abstract method from parent for getTotal that returns the (rate * quantity)
-..* InvoiceLineItem
-    ..* id
-    ..* billingRecord (@OneToOne) 
-    ..* createdOn
-    ..* invoice (@ManyToOne)
+  * Company
+      * id
+      * name
+      * Invoices (@OneToMany(mappedBy=“company")
+  * Invoice
+      * id
+      * company (@ManyToOne)
+      * createdOn
+      * invoiceDescription
+      * lineItems (@OneToMany(mappedBy="invoice", cascade=CascadeType.ALL)
+  * BillingRecord (abstract class)
+      * id
+      * createdOn
+      * description
+      * lineItem (@OneToOne(mappedBy=“billingRecord”)
+      * company (@ManyToOne)
+      * Create abstract method getTotal. Should return a double
+  * FlatFeeBillingRecord (extends BillingRecord)
+      * amount
+      * Implement abstract method from parent for getTotal that returns the amount property
+  * RateBasedBillingRecord (extends BillingRecord)
+      * rate
+      * quantity
+     * Implement abstract method from parent for getTotal that returns the (rate * quantity)
+  * InvoiceLineItem
+      * id
+      * billingRecord (@OneToOne) 
+      * createdOn
+      * invoice (@ManyToOne)
 
 Create JPA Repositories
-..* BillingRecordRepository
-..* CompanyRepository
-..* InvoiceLineItemRepository
-..* InvoiceRepository
+  * BillingRecordRepository
+  * CompanyRepository
+  * InvoiceLineItemRepository
+  * InvoiceRepository
 
 Create Controller Tests
 BillingRecordController
