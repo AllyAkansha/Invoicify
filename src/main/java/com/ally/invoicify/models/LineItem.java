@@ -7,7 +7,6 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
-
 @Entity
 @Table(name="lineitems")
 public class LineItem {
@@ -24,7 +23,6 @@ public class LineItem {
 //	invoice (@ManyToOne)
 	@ManyToOne
 	private Invoice invoice;
-	
 	
     public LineItem() {}
 
@@ -53,8 +51,5 @@ public class LineItem {
 	public void setInvoice(Invoice invoice) {
 		this.invoice = invoice;
 	}
-    
-	
-	
 
 }

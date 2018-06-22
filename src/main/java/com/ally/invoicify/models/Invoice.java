@@ -1,6 +1,6 @@
 package com.ally.invoicify.models;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -9,8 +9,6 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-
-
 
 @Entity
 @Table(name="invoices")
@@ -30,7 +28,7 @@ public class Invoice {
 		
 		//lineItems (@OneToMany(mappedBy="invoice", cascade=CascadeType.ALL)
 		@OneToMany(mappedBy="invoice", cascade=CascadeType.ALL)
-		private ArrayList<LineItem> lineItems;
+		private List<LineItem> lineItems;
 		
 	    public Invoice() {}
 
@@ -40,6 +38,9 @@ public class Invoice {
 	        this.invoiceDescription = invoiceDescription;
 	    }
 	    
+	    public void setId(int id) {
+	    	this.id = id;
+	    }
 		public String getName() {
 			return name;
 		}

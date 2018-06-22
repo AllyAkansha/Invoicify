@@ -1,6 +1,6 @@
 package com.ally.invoicify.models;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -18,12 +18,16 @@ public class Company {
 	private String name;
 	//Invoices (@OneToMany(mappedBy=“company")
     @OneToMany (mappedBy="company")
-    private ArrayList<Invoice> invoices;
+    private List<Invoice> invoices;
 	
     public Company() {}
 
     public Company(String name){
         this.name = name;
+    }
+    
+    public void setId(int id) {
+    	this.id = id;
     }
     
 	public int getId() {
