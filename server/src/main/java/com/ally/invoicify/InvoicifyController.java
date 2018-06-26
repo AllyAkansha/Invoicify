@@ -1,6 +1,6 @@
 package com.ally.invoicify;
 
-import java.util.ArrayList;
+//import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.stereotype.Controller;
@@ -10,8 +10,8 @@ import com.ally.invoicify.models.FlatFeeBillingRecord;
 import com.ally.invoicify.models.Invoice;
 import com.ally.invoicify.models.RateBasedBillingRecord;
 import com.ally.invoicify.repositories.BillingRecordRepository;
-import com.ally.invoicify.repositories.CompanyRepository;
-import com.ally.invoicify.repositories.InvoiceLineItemRepository;
+//import com.ally.invoicify.repositories.CompanyRepository;
+//import com.ally.invoicify.repositories.InvoiceLineItemRepository;
 import com.ally.invoicify.repositories.InvoiceRepository;
 
 @Controller
@@ -19,8 +19,8 @@ import com.ally.invoicify.repositories.InvoiceRepository;
 public class InvoicifyController {
 
 	  private BillingRecordRepository BillingRecordRepo;
-	  private CompanyRepository CompanyRepo;
-	  private InvoiceLineItemRepository InvoiceLineItemRepo;
+	  //private CompanyRepository CompanyRepo;
+	  //private InvoiceLineItemRepository InvoiceLineItemRepo;
 	  private InvoiceRepository InvoiceRepo;
 	
 //	list method returns all billing records

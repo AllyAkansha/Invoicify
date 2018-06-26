@@ -1,5 +1,6 @@
 package com.ally.invoicify.models;
 
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -19,7 +20,7 @@ public class Invoice {
 	    private int id;
 	    
 		private String name;
-		private String createdOn;
+		private Date createdOn;
 		private String invoiceDescription;
 		
 		//company (@ManyToOne)
@@ -32,7 +33,7 @@ public class Invoice {
 		
 	    public Invoice() {}
 
-	    public Invoice(String name, String createdOn, String invoiceDescription){
+	    public Invoice(String name, Date createdOn, String invoiceDescription){
 	        this.name = name;
 	        this.createdOn = createdOn;
 	        this.invoiceDescription = invoiceDescription;
@@ -47,10 +48,10 @@ public class Invoice {
 		public void setName(String name) {
 			this.name = name;
 		}
-		public String getCreatedOn() {
+		public Date getCreatedOn() {
 			return createdOn;
 		}
-		public void setCreatedOn(String createdOn) {
+		public void setCreatedOn(Date createdOn) {
 			this.createdOn = createdOn;
 		}
 		public String getInvoiceDescription() {

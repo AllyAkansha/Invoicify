@@ -5,7 +5,7 @@ public class RateBasedBillingRecord extends BillingRecord{
 	private int quantity;
 	
 //	Implement abstract method from parent for getTotal that returns the (rate * quantity)
-	public  double getTotal() {
+	public double getTotal() {
 		return (this.rate * this.quantity);
 	}
 	
