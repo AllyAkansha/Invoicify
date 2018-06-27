@@ -30,13 +30,23 @@ public class BillingRecordApiController {
   public List<BillingRecord> getAll() {
     return billingRecordRepo.findAll();
   }
-  
+  /***
+   * Associate a flat billing record (POST) with the provided client id.
+   * @param billingRecord
+   * @param clientId
+   * @return
+   */
   @PostMapping("flat-fee/{clientId}")
   public BillingRecord createFlatFeeBillingRecord(@RequestBody FlatFeeBillingRecord billingRecord, @PathVariable int clientId) {
 	  billingRecord.setCompany(companyRepo.findOne(clientId));
 	  return billingRecordRepo.save(billingRecord);
   }
-  
+  /***
+   * Associate a rate billing record (POST) with provided client id.
+   * @param billingRecord
+   * @param clientId
+   * @return
+   */
   @PostMapping("rate-based/{clientId}")
   public BillingRecord createRateBasedBillingRecord(@RequestBody FlatFeeBillingRecord billingRecord, @PathVariable int clientId) {
 	  billingRecord.setCompany(companyRepo.findOne(clientId));

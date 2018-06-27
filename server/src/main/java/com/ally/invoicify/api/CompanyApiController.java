@@ -24,27 +24,52 @@ public class CompanyApiController {
     this.companyRepo = companyRepo;
   }
 
+  /***
+   * Default mapping, to return a list of companies.
+   * @return
+   */
   @GetMapping("")
   public List<Company> getAll() {
     return companyRepo.findAll();
   }
 
+  /***
+   * Mapping to find a company with given id.
+   * @param id
+   * @return
+   */
   @GetMapping("{id}")
   public Company getOne(@PathVariable int id) {
     return companyRepo.findOne(id);
   }
 
+  /***
+   * Mapping (POST) to place a new company in the db.
+   * @param actor
+   * @return
+   */
   @PostMapping("")
   public Company create(@RequestBody Company actor) {
     return companyRepo.save(actor);
   }
 
+  /***
+   * Mapping (PUT) to update a company's id.
+   * @param company
+   * @param id
+   * @return
+   */
   @PutMapping("{id}")
   public Company update(@RequestBody Company company, @PathVariable int id) {
     company.setId(id);
     return companyRepo.save(company);
   }
 
+  /***
+   * Mapping (DELETE) to delete company with given id.
+   * @param id
+   * @return
+   */
   @DeleteMapping("{id}")
   public Company delete(@PathVariable int id) {
     Company actor = companyRepo.findOne(id);
