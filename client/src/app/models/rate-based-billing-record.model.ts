@@ -1,4 +1,4 @@
-import './company.model'
+import { Company } from './company.model'
 
 export interface RateBasedBillingRecord {
   id: number,
