@@ -21,7 +21,7 @@ public class Invoice {
 	    
 		private String name;
 		private Date createdOn;
-		private String invoiceDescription;
+		private String description;
 		
 		//company (@ManyToOne)
 		@ManyToOne
@@ -33,10 +33,10 @@ public class Invoice {
 		
 	    public Invoice() {}
 
-	    public Invoice(String name, Date createdOn, String invoiceDescription){
+	    public Invoice(String name, Date createdOn, String description){
 	        this.name = name;
 	        this.createdOn = createdOn;
-	        this.invoiceDescription = invoiceDescription;
+	        this.description = description;
 	    }
 	    
 	    public void setId(int id) {
@@ -55,12 +55,9 @@ public class Invoice {
 			this.createdOn = createdOn;
 		}
 		public String getInvoiceDescription() {
-			return invoiceDescription;
+			return description;
 		}
 		public void setInvoiceDescription(String invoiceDescription) {
-			this.invoiceDescription = invoiceDescription;
+			this.description = invoiceDescription;
 		}
-	    
-	    
-	
 }
