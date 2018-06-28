@@ -18,7 +18,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 @Table(name="app_user")
 public class User implements UserDetails {
 
-	private static final int serialVersionUID = 1;
+	private static final long serialVersionUID = 1;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)

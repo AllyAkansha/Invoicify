@@ -3,25 +3,26 @@
     Add Billing Record 
 </button>
 <table class="table table-hover">
-  <thead>
-    <tr>
-      <th scope="col">ID</th>
-      <th scope="col">Description</th>
-      <th scope="col">Client</th>
-      <th scope="col">Type</th>
-      <th scope="col">Total</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Testing Billing Records</td>
-      <td></td>
-      <td></td>
-      <td></td>
-
-    </tr>
-  </tbody>
+    <thead>
+        <tr>
+          <th>ID</th>
+          <th>Description</th>
+          <th>Client</th>
+          <th>Type</th>
+          <th>Created By</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let billingRecord of billingRecords">
+          <td>{{billingRecord.id}}</td>
+          <td>{{billingRecord.description}}</td>
+          <td>{{billingRecord.client.name}}</td>
+          <td>{{(billingRecord.rate && billingRecord.quantity) ? "Rate Based" : "Flat Fee"}}</td>
+          <td>{{billingRecord.createdBy.username}}</td>
+          <td>{{billingRecord.total}}</td>
+        </tr>
+      </tbody>
 </table>
 
  

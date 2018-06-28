@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BillingRecordService } from '../services/billing-record.service';
 
 @Component({
   selector: 'app-billing-record',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BillingRecordComponent implements OnInit {
 
-  constructor() { }
+  billingRecords = [];
+
+  constructor(private billingRecordService: BillingRecordService) { }
 
   ngOnInit() {
+    this.getBillingRecords();
+  }
+
+  getBillingRecords() {
+    this.billingRecordService.getAllBillingRecords().subscribe(
+      billingRecords => this.billingRecords = billingRecords
+    )
   }
 
 }

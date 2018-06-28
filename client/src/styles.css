@@ -10,7 +10,7 @@ table {
 }
 
 /* Customize container */
-media (min-width: 1000px) {
+@media (min-width: 1000px) {
     .container {
         max-width: 768px;
     }

@@ -11,7 +11,7 @@ import 'rxjs/add/observable/empty';
 @Injectable()
 export class DataService {
 
-    private baseUrl = 'https://localhost:4200/api/'
+    private baseUrl = 'http://localhost:8080/api/'
 
     found = false;
 
@@ -44,6 +44,7 @@ export class DataService {
     editRecord(endpoint: string, record:object, id?:number): Observable<object> {
         let apiUrl = `${this.baseUrl}${endpoint}`;
         apiUrl = (id) ? apiUrl + "/" + id : apiUrl;
+        console.log(apiUrl)
         return this.http.put(apiUrl, record, this.options)
             .map(this.extractData)
             .catch(this.handleError);

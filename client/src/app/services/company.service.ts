@@ -9,7 +9,7 @@ import 'rxjs/add/operator/map'
 })
 export class CompanyService {
 
-  private baseUrl: string = 'http://localhost:4200/api/company'
+  private baseUrl: string = 'http://localhost:8080/api/company'
 
   constructor(private http: Http) { }
 
