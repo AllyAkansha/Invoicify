@@ -1,0 +1,84 @@
+[33mcommit eb3b81b0cd472533093c7796cf67acb88181c716[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: Jason Medcoff <jason.medcoff@ally.com>
+Date:   Wed Jun 27 14:43:43 2018 -0400
+
+    add user stuff
+
+[33mcommit 2f61f734fdc1ee3c9ef47ece5671555787f6388e[m
+Author: Evan Bradley <evan.bradley@ally.com>
+Date:   Wed Jun 27 13:33:55 2018 -0400
+
+    Added cors configuration.
+
+[33mcommit 88199f0de7c1080f6a63c06544fe634c294c45e0[m
+Author: Evan Bradley <evan.bradley@ally.com>
+Date:   Wed Jun 27 11:43:12 2018 -0400
+
+    Updated backend models.
+
+[33mcommit 5d1508e8e05e063ee344276548e07ce7559ed666[m
+Author: Jason Medcoff <jason.medcoff@ally.com>
+Date:   Wed Jun 27 10:50:15 2018 -0400
+
+    added some commentary
+
+[33mcommit 36fca6a6b09bfa06ca5a89c191a4894121b5f3b7[m
+Author: Evan Bradley <evan.bradley@ally.com>
+Date:   Tue Jun 26 14:36:37 2018 -0400
+
+    Moved backend code.
+
+[33mcommit 1b36d8c3f591e6d6ccffbe743085fe571cfa0084[m
+Author: Evan Bradley <evan.bradley@ally.com>
+Date:   Tue Jun 26 14:35:25 2018 -0400
+
+    Added frontend.
+
+[33mcommit 1d68e368625bcff92886fbb59022dc9586c194a0[m
+Author: Evan Bradley <evan.bradley@ally.com>
+Date:   Mon Jun 25 09:15:33 2018 -0400
+
+    Added API endpoints.
+
+[33mcommit 5851448a198bd61b66a32f52ce2754084bd1cb34[m
+Merge: ea7cf08 201aad8
+Author: Evan Bradley <evan.bradley@ally.com>
+Date:   Fri Jun 22 14:04:14 2018 -0400
+
+    Merge branch 'master' of https://github.com/AllyAkansha/Invoicify
+
+[33mcommit ea7cf0805691a5baee2ca83759f749af6b51dffc[m
+Author: Evan Bradley <evan.bradley@ally.com>
+Date:   Fri Jun 22 14:04:05 2018 -0400
+
+    Fixed models and added API for company.
+
+[33mcommit 201aad8a15e5ef67b4062305e4ebfa1bf4f2244f[m
+Author: Jason Medcoff <jason.medcoff@ally.com>
+Date:   Fri Jun 22 09:26:34 2018 -0400
+
+    fixed readme again
+
+[33mcommit 6df7d0ef1821fabc41973795a820f6fe890e759a[m
+Author: Jason Medcoff <jason.medcoff@ally.com>
+Date:   Fri Jun 22 09:24:31 2018 -0400
+
+    clean up readme
+
+[33mcommit a85df70acdcbcca57b3c90ef42b51a3d8809b107[m
+Author: Evan Bradley <evan.bradley@ally.com>
+Date:   Fri Jun 22 09:21:40 2018 -0400
+
+    Refactor package names.
+
+[33mcommit bc23a7100029bcd5e601f219fa496c19a4c578dc[m
+Author: AllyAkansha <40063411+AllyAkansha@users.noreply.github.com>
+Date:   Thu Jun 21 13:42:24 2018 -0400
+
+    Create README.md
+
+[33mcommit 93615bf2b530d503b043bb03e8b4b304bbd4c4b4[m
+Author: CZBDL3@ALLYIPOC.COM <CZBDL3@ALLYIPOC.COM>
+Date:   Thu Jun 21 13:30:52 2018 -0400
+
+    first commit
