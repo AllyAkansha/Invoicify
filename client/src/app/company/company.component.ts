@@ -11,11 +11,19 @@ export class CompanyComponent implements OnInit {
 
   companies: Company[]
 
+  newCompanyName: String
+
   constructor(private companyService: CompanyService) { }
 
   ngOnInit() {
     this.companyService.getAllCompanies().subscribe(
       companies => this.companies = companies
+    )
+  }
+
+  submit() {
+    this.companyService.createCompany(this.newCompanyName).subscribe(
+      company => this.companies.push(company)
     )
   }
 
