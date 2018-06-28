@@ -2,3 +2,26 @@
 body {
     background: #f2f2f2;
 }
+table {
+    margin-top: 10px;
+  }
+
+/* Customize container */
+@media (min-width: 600px) {
+    .container {
+        max-width: 768px;
+    }
+}
+
+/* Customize container */
+@media (min-width: 800px) {
+    .container-fluid {
+        max-width: 1024px;
+    }
+}
+
+/* You can add global styles to this file, and also import other style files */
+/* @import '~@angular/material/prebuilt-themes/deeppurple-amber.css'; */
+
+
+

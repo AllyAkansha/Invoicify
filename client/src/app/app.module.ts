@@ -8,6 +8,8 @@ import { InvoiceComponent } from './invoice/invoice.component';
 import { InvoiceModalComponent } from './invoice-modal/invoice-modal.component';
 
 import { BillingRecordComponent } from './billing-record/billing-record.component';
+import { AppRoutingModule } from './/app-routing.module';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
@@ -15,11 +17,13 @@ import { BillingRecordComponent } from './billing-record/billing-record.componen
     CompanyComponent,
     InvoiceComponent,
     InvoiceModalComponent,
-    BillingRecordComponent
+    BillingRecordComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
-    HttpModule
+    HttpModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
