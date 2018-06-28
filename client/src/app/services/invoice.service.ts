@@ -26,8 +26,9 @@ export class InvoiceService {
       .map(result => result.json())
   }
 
-  createInvoice(invoice: Invoice): Observable<any> {
-    return this.http.post(this.baseUrl, { invoice }, this.options)
+  createInvoice(invoice: Invoice, companyId: number): Observable<any> {
+    console.log(`${this.baseUrl}/${companyId}`)
+    return this.http.post(`${this.baseUrl}/${companyId}`, { invoice }, this.options)
       .map(result => result.json())
   }
 

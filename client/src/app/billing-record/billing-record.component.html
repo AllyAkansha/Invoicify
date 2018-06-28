@@ -1,7 +1,5 @@
 
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-    Add Billing Record 
-</button>
+
 <table class="table table-hover">
     <thead>
         <tr>
@@ -24,6 +22,10 @@
         </tr>
       </tbody>
 </table>
+
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Add Billing Record 
+</button>
 
  
     <!-- Modal -->
@@ -48,6 +50,8 @@
                     <div class="input-group mb-3">
                         <select required type="text" class="form-control"  aria-describedby="basic-addon2">
                           <option disabled> Select Client</option>
+                          <option *ngFor="let company of companies">{{company.name}}</option>
+
                         </select>
                         </div>
 

@@ -1,28 +1,18 @@
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Add User
-</button>
 
 <table class="table table-hover">
 <thead>
   <tr>
     <th scope="col">ID</th>
     <th scope="col">Username</th>
-    <th scope="col">Admin?</th>
   </tr>
 </thead>
 <tbody>
-  <tr>
-      <td>GM</td>
-    <th scope="row">King Wan</th>
-    
-    <td>GM</td>
-
+  <tr *ngFor="let user of users">  
+      <td>{{user.id}}</td>
+      <td>{{user.username}}</td>
   </tr>
 </tbody>
 </table>
-
-
     
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -55,3 +45,7 @@
         </div>
       </div>
     
+      <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Add User
+  </button>

@@ -1,8 +1,3 @@
-<!-- Button trigger modal -->
-  
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-    Add Invoice
-  </button>
 
 <table class="table table-hover">
     <thead>
@@ -41,23 +36,33 @@
 
           <div class="modal-body"> 
               <div class="input-group mb-3">
-            <select required type="text" class="form-control"  aria-describedby="basic-addon2">
+            <select required type="text" class="form-control"  aria-describedby="basic-addon2" [(ngModel)]="companyId" >
               <option disabled> Select Client</option>
+                <option *ngFor="let company of companies" [ngValue]=company.id>{{company.name}}</option>
             </select>
             </div>
             <div class="input-group mb-3">
-            <input required type="text" class="form-control" placeholder="Invoice Name" aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <input required [(ngModel)]="newInvoice.invoiceDescription" type="text" class="form-control" placeholder="Invoice Name" aria-label="Billing Records" aria-describedby="basic-addon2">
           </div>
            <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+              <select required type="text" class="form-control"  aria-describedby="basic-addon2">
+                  <option disabled> Select Billing Records</option>
+                    <option *ngFor="let record of records">{{record.description}}-- {{record.total}}</option>
+    
+                </select>
+            <!-- <input type="text" class="form-control" placeholder="Billing Records" aria-label="Recipient's username" aria-describedby="basic-addon2"> -->
           </div>
          </div>
 
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button (click)="submit()" type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
           </div>
         </div>
       </div>
     </div>
+  <!-- Button trigger modal -->
   
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Add Invoice
+  </button>
