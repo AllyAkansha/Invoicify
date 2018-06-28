@@ -19,6 +19,7 @@ import { DataService } from './data.service';
 
 import { AuthGuard } from './auth-guard.service';
 import { AuthService } from './auth.service';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { AuthService } from './auth.service';
     InvoiceComponent,
     InvoiceModalComponent,
     BillingRecordComponent,
-    DashboardComponent
+    DashboardComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,

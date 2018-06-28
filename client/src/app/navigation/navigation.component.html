@@ -1,17 +1,38 @@
-<nav class="navbar navbar-inverse navbar-fixed-top">
+<nav class="navbar navbar-expand navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
-                aria-controls="navbar">
+            <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+            aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
-            </button>
+            </button>     -->
             <a class="navbar-brand" routerLink="/">
                 <img src="assets/logo.png" alt="Ally Invoicify">
             </a>
         </div>
+
+        <div id="navbar navbarNavDropdown " class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li routerLinkActive="active">
+                    <a class="nav-item nav-link active" routerLink="/dashboard">Dashboard</a>
+                </li>
+                <li *ngIf="authService.isAuthenticated()" routerLinkActive="active">
+                    <a class="nav-item nav-link active" routerLink="/company">Companies</a>
+                </li>
+                <li *ngIf="authService.isAuthenticated()" routerLinkActive="active">
+                    <a class="nav-item nav-link active" routerLink="/billing-record">Billing Records</a>
+                </li>
+                <li *ngIf="authService.isAuthenticated()" routerLinkActive="active">
+                        <a class="nav-item nav-link active" routerLink="/invoice">Invoices</a>
+                    </li>
+                <li *ngIf="authService.isAuthenticated()" routerLinkActive="active">
+                    <a class="nav-item nav-link active" routerLink="/user">Users</a>
+                </li>
+            </ul>
+        </div>
+
          <!--/.nav-collapse -->
          <form class="navbar-form navbar-right" (ngSubmit)="login(loginForm)" #loginForm="ngForm" *ngIf="!authService.isAuthenticated()">
             <div class="form-group">
@@ -25,25 +46,8 @@
         <div class="navbar-text navbar-right" *ngIf="authService.isAuthenticated()">
             Signed in as: <a [routerLink]="['/user/edit/', auth_user.id]">{{auth_user.username}}</a> (<a (click)="logout()">Logout</a>)
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li routerLinkActive="active">
-                    <a routerLink="/dashboard">Dashboard</a>
-                </li>
-                <li *ngIf="authService.isAuthenticated()" routerLinkActive="active">
-                    <a routerLink="/company">Companies</a>
-                </li>
-                <li *ngIf="authService.isAuthenticated()" routerLinkActive="active">
-                    <a routerLink="/billing-record">Billing Records</a>
-                </li>
-                <li *ngIf="authService.isAuthenticated()" routerLinkActive="active">
-                        <a routerLink="/invoice">Invoices</a>
-                    </li>
-                <li *ngIf="authService.isAuthenticated()" routerLinkActive="active">
-                    <a routerLink="/user">Users</a>
-                </li>
-            </ul>
-        </div>
+
+
     </div>
 </nav>
 
