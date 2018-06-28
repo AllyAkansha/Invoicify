@@ -11,7 +11,7 @@ import { Company } from '../models/company.model'
 })
 export class BillingRecordService {
 
-  private baseUrl: string = 'http://localhost:4200/api/company'
+  private baseUrl: string = 'http://localhost:8080/api/billing-record'
 
   constructor(private http: Http) { }
 
@@ -21,12 +21,12 @@ export class BillingRecordService {
   }
 
   createRateBasedBillingRecord(rate: number, quantity: number, company: Company, description: String): Observable<any> {
-    return this.http.post(this.baseUrl, { rate, quantity, company, description })
+    return this.http.post(`${this.baseUrl}/rate-based/`, { rate, quantity, company, description })
       .map(result => result.json())
   }
 
   createFlatFeeBillingRecord(amount: number, company: Company, description: String): Observable<any> {
-    return this.http.post(this.baseUrl, { amount, company, description })
+    return this.http.post(`${this.baseUrl}/flat-fee/`, { amount, company, description })
       .map(result => result.json())
   }
 }

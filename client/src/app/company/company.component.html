@@ -10,11 +10,9 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">Test Company</th>
-      <td>GM</td>
-
+    <tr *ngFor="let company of companies">
+      <th scope="row">{{company.id}}</th>
+      <td>{{company.name}}</td>
     </tr>
-
   </tbody>
 </table>

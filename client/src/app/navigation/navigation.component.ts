@@ -25,9 +25,14 @@ export class NavigationComponent implements OnInit {
     this.authService.logout().subscribe(
       success=> {
         this.refreshUser();
-        this.router.navigate(["home"])
+        () => {
+          this.router.navigate(["dashboard"])
+          this.auth_user = {}
+          localStorage.removeItem("auth_user")
+        }
       } 
     );
+    localStorage.removeItem("auth_user");
   }
 
   login(user: NgForm) {
