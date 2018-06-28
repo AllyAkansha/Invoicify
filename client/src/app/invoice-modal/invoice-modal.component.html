@@ -1,0 +1,46 @@
+
+<!-- id: number,
+name: String,
+createdOn: Date,
+description: String -->
+
+
+<!-- Modal -->
+<!-- class= "modal fade" -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add Invoice</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <!-- <label for="formGroupExampleInput">ID</label> -->
+            <!-- <input required type="text" class="form-control" name="id_in" id="new_invoice_id" placeholder="Id (ex: 1305)"> -->
+            <select class="form-control" >
+                <option disabled selected>Select Client</option>
+                <!-- for all clients in database -->
+                <option></option>
+              </select>
+          </div>
+          <div class="form-group">
+            <!-- <label for="formGroupExampleInput2">Name</label> -->
+            <input required type="text" class="form-control" name="name_in" id="new_invoice_name" placeholder="Name">
+          </div>
+          <div class="form-group">
+            <!-- <label for="formGroupExampleInput2">Description</label> -->
+            <input type="text" class="form-control" name="description_in" id="new_invoice_description" placeholder="Description (optional)">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
