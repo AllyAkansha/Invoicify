@@ -5,23 +5,26 @@
   </button>
 
 <table class="table table-hover">
-  <thead>
-    <tr>
-      <th scope="col">ID</th>
-      <th scope="col">Name</th>
-      <th scope="col">Created On</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">Test Invoice</th>
-      <td>GM</td>
-      <td>GM</td>
-      <td>GM</td>
-
-    </tr>
-  </tbody>
+    <thead>
+        <tr>
+          <th>ID</th>
+          <th>Description</th>
+          <th>Client</th>
+          <th>Line Items</th>
+          <th>Created By</th>
+          <th>Created On</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let invoice of invoices">
+          <td>{{invoice.id}}</td>
+          <td>{{invoice.invoiceDescription}}</td>
+          <td>{{invoice.company.name}}</td>
+          <td>{{invoice.lineItems.length}}</td>
+          <td>{{invoice.createdBy.username}}</td>
+          <td>{{invoice.createdOn}}</td>
+        </tr>
+      </tbody>
 </table>
 
     

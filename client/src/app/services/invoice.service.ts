@@ -10,31 +10,31 @@ import { Invoice } from '../models/invoice.model'
 })
 export class InvoiceService {
 
-  private baseUrl: string = 'http://localhost:8080/api/company'
+  private baseUrl: string = 'http://localhost:8080/api/invoice'
 
   constructor(private http: Http) { }
 
-  getAllCompanies(): Observable<any> {
+  getAllInvoices(): Observable<any> {
     return this.http.get(this.baseUrl)
       .map(result => result.json())
   }
 
-  getCompany(id: number): Observable<any> {
+  getInvoice(id: number): Observable<any> {
     return this.http.get(`${this.baseUrl}/${id}`)
       .map(result => result.json())
   }
 
-  createCompany(invoice: Invoice): Observable<any> {
+  createInvoice(invoice: Invoice): Observable<any> {
     return this.http.post(this.baseUrl, { invoice })
       .map(result => result.json())
   }
 
-  updateCompany(id: number, invoice: Invoice): Observable<any> {
+  updateInvoice(id: number, invoice: Invoice): Observable<any> {
     return this.http.put(`${this.baseUrl}/${id}`, { invoice })
       .map(result => result.json())
   }
 
-  deleteCompany(id: number): Observable<any> {
+  deleteInvoice(id: number): Observable<any> {
     return this.http.delete(`${this.baseUrl}/${id}`)
       .map(result => result.json())
   }
