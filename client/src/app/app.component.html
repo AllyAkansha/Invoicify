@@ -3,7 +3,7 @@
     <img src="assets/logo.png" alt="Ally Invoicify">
   </a>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <div class="collapse navbar-collapse container" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
         <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
@@ -21,7 +21,6 @@
   </div>
 </nav>
 
-<app-company></app-company>
-<app-invoice></app-invoice>
-<app-invoice-modal></app-invoice-modal>
-<app-billing-record></app-billing-record>
+<body class="container"> 
+<router-outlet></router-outlet>
+</body>

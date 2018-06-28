@@ -7,7 +7,7 @@ import { BillingRecordComponent }      from './billing-record/billing-record.com
 import { UserComponent }      from './user/user.component';
 
 import { InvoiceModalComponent }      from './invoice-modal/invoice-modal.component';
-
+  
 
 const routes: Routes = [
   { path: 'companies', component: CompanyComponent },
