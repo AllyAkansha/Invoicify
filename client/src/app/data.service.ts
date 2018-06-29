@@ -7,11 +7,12 @@ import 'rxjs/add/observable/throw';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/expand';
 import 'rxjs/add/observable/empty';
+import apiUrl from './services/apiUrl';
 
 @Injectable()
 export class DataService {
 
-    private baseUrl = 'https://api-invoicify-phase2.herokuapp.com/api/'
+    private baseUrl = `${apiUrl}/api/`
 
     found = false;
 

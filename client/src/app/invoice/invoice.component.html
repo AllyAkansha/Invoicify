@@ -42,12 +42,12 @@
             </select>
             </div>
             <div class="input-group mb-3">
-            <input required [(ngModel)]="newInvoice.invoiceDescription" type="text" class="form-control" placeholder="Invoice Name" aria-label="Billing Records" aria-describedby="basic-addon2">
+            <input required [(ngModel)]="invoiceDescription" type="text" class="form-control" placeholder="Invoice Name" aria-label="Billing Records" aria-describedby="basic-addon2">
           </div>
            <div class="input-group mb-3">
-              <select required type="text" class="form-control"  aria-describedby="basic-addon2">
+              <select required type="text" class="form-control"  aria-describedby="basic-addon2" [(ngModel)]="recordId">
                   <option disabled> Select Billing Records</option>
-                    <option *ngFor="let record of records">{{record.description}}-- {{record.total}}</option>
+                    <option *ngFor="let record of records" [ngValue]=record.id>{{record.client.name}}: {{record.description}} -- {{record.total}}</option>
     
                 </select>
             <!-- <input type="text" class="form-control" placeholder="Billing Records" aria-label="Recipient's username" aria-describedby="basic-addon2"> -->

@@ -6,12 +6,14 @@ import 'rxjs/add/operator/map'
 
 import { Company } from '../models/company.model'
 
+import apiUrl from './apiUrl';
+
 @Injectable({
   providedIn: 'root'
 })
 export class BillingRecordService {
 
-  private baseUrl: string = 'https://api-invoicify-phase2.herokuapp.com/api/billing-record'
+  private baseUrl: string = `${apiUrl}/api/billing-record`
 
   options = new RequestOptions({ withCredentials: true });
 

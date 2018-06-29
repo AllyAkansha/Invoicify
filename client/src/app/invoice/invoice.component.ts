@@ -15,13 +15,16 @@ export class InvoiceComponent implements OnInit {
   invoices = []
   companies: Company[]
   records: any[]
+  recordId: number
 
   newInvoice: Invoice = {
     id: 0,
     invoiceDescription: "",
-    createdOn: new Date()
+    createdOn: new Date(),
+    recordIds: []
   }
 
+  invoiceDescription: String;
   companyId: number;
 
   constructor(private invoiceService: InvoiceService, private companyService: CompanyService, private billingrecordService: BillingRecordService) { }
@@ -42,8 +45,8 @@ export class InvoiceComponent implements OnInit {
     )
   }
   submit() {
-    console.log(this.newInvoice, this.companyId)
-    this.invoiceService.createInvoice(this.newInvoice, this.companyId)
+    console.log({ invoiceDescription: this.invoiceDescription, recordIds: [ this.recordId ] })
+    this.invoiceService.createInvoice({ invoiceDescription: this.invoiceDescription, recordIds: [ this.recordId ] }, this.companyId)
   }
 
 }

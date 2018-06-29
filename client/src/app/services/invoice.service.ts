@@ -5,12 +5,14 @@ import { Observable } from 'rxjs/Observable'
 import 'rxjs/add/operator/map'
 import { Invoice } from '../models/invoice.model'
 
+import apiUrl from './apiUrl';
+
 @Injectable({
   providedIn: 'root'
 })
 export class InvoiceService {
 
-  private baseUrl: string = 'https://api-invoicify-phase2.herokuapp.com/api/invoice'
+  private baseUrl: string = `${apiUrl}/api/invoice`
 
   options = new RequestOptions({ withCredentials: true });
 
@@ -26,7 +28,7 @@ export class InvoiceService {
       .map(result => result.json())
   }
 
-  createInvoice(invoice: Invoice, companyId: number): Observable<any> {
+  createInvoice(invoice: object, companyId: number): Observable<any> {
     console.log(`${this.baseUrl}/${companyId}`)
     return this.http.post(`${this.baseUrl}/${companyId}`, { invoice }, this.options)
       .map(result => result.json())

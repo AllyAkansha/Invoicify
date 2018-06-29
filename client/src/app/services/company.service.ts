@@ -4,12 +4,14 @@ import { Http, Response, RequestOptions } from '@angular/http'
 import { Observable } from 'rxjs/Observable'
 import 'rxjs/add/operator/map'
 
+import apiUrl from './apiUrl';
+
 @Injectable({
   providedIn: 'root'
 })
 export class CompanyService {
 
-  private baseUrl: string = 'https://api-invoicify-phase2.herokuapp.com/api/company'
+  private baseUrl: string = `${apiUrl}/api/company`
 
   options = new RequestOptions({ withCredentials: true });
 
